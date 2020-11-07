@@ -1,5 +1,7 @@
 import numpy as np
 import keras
+import glob
+
 
 class DataGenerator(keras.utils.Sequence):
     """Generates data for Keras"""
@@ -38,7 +40,7 @@ class DataGenerator(keras.utils.Sequence):
     def on_epoch_end(self):
         """Updates indexes after each epoch"""
         self.indexes = np.arange(len(self.list_IDs))
-        if self.shuffle == True:
+        if self.shuffle:
             np.random.shuffle(self.indexes)
 
     def __data_generation(self, list_IDs_temp, list_labels_temp):
@@ -48,15 +50,15 @@ class DataGenerator(keras.utils.Sequence):
         # y = np.empty((self.batch_size), dtype=int)
 
         # Generate data
-
         # print(list_IDs_temp)
         # print(self.labels)
 
         for i, ID in enumerate(list_IDs_temp):
-
             # Store sample
-            X[i,] = np.load(r'\Users\kentw\OneDrive - University of Toronto\PycharmProjects\kinetics-i3d\data\MAA\\'
-                            + ID + '.npy')
+            path = \
+                glob.glob(r'C:\Users\kentw\OneDrive - University of Toronto\PycharmProjects\Fall-Detection-with-CNNs-and-Optical-Flow\MAA\\'
+                          + '/*/' + ID + '.npy')[0]
+            X[i,] = np.load(path)
 
         # Store class
         y = np.array(list_labels_temp, dtype=int)
