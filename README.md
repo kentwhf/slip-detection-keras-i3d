@@ -24,5 +24,5 @@ Change checkpoint parameters for different experiments.
 python -m scripts.experiment --cross_validation_type subject-wise
 ```
 
-# License
+## License
 All code in this repository are licensed under the MIT license as specified by the LICENSE file.
