@@ -1,4 +1,4 @@
-# fall-detection-keras-i3d
+# slip-detection-keras-i3d
 This is a Keras implementation of Inflated 3d Inception architecture for bianry classification in fall detection, especially. If you would like to find more details, please refer to: Wu K, He S, Fernie G, Roshan Fekr A. [Deep Neural Network for Slip Detection on Ice Surface](https://www.mdpi.com/1424-8220/20/23/6883#cite). Sensors. 2020; 20(23):6883.
 
 ## Dataset
