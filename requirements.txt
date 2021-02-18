@@ -101,7 +101,7 @@ tabulate==0.8.7
 tensorboard==1.15.0
 tensorflow==1.15.0
 tensorflow-estimator==1.15.1
-tensorflow-gpu==1.15.0
+tensorflow-gpu==2.4.0
 tensorflow-gpu-estimator==2.1.0
 tensorflow-probability==0.8.0
 termcolor==1.1.0
